@@ -2,15 +2,10 @@ const write = (i = 0, answer = '') => {
   document.write(`${i === 0 ? '' : i}  ${answer} <br>`)
 }
 
-// export function sum(a: number, b: number) {
-//   return a + b
-// }
-// write(sum(1, 1))
-
 const start = (text: string) => {
   document.write(`
   <br><br><br><br><br><br>
-  ####################<br>
+  <br><br><br><br><br><br>
   ${text}:<br>
   `)
 }
@@ -26,8 +21,6 @@ const demoOne = () => {
   }
 }
 demoOne()
-// module.exports = demoOne
-//export default demoOne()
 
 start('Demo Two')
 for (let index = 1; index <= 30; index++) {
@@ -57,7 +50,7 @@ const demoThree = (range: number) => {
 demoThree(30)
 
 start('Demo Four')
-const fizzBuzz = (n: number) => {
+const cleverPush_ = (n: number) => {
   for (let i = 1; i <= n; i++) {
     const divisibleBy = (divider: number, n: number) => n % divider == 0
 
@@ -67,7 +60,7 @@ const fizzBuzz = (n: number) => {
     else write(i)
   }
 }
-fizzBuzz(30)
+cleverPush_(30)
 
 start('Demo Five ')
 const sieve = new Array(30)
@@ -107,7 +100,6 @@ const myArray = numbers
 write(0, myArray)
 
 start('Demo Seven')
-// source: https://joshtronic.com/2018/08/05/fizzbuzz-in-typescript-3/
 let divBy3: boolean
 let divBy5: boolean
 let i: number
@@ -121,7 +113,7 @@ for (i = 1; i <= 30; i += 1) {
   if (divBy3) output += 'Clever'
   if (divBy5) output += 'Push'
 
-  // below statement not needed. printToPage() will always print the Number.
+  // below statement not needed.
   // if (!(divBy3 || divBy5)) output = ''
   write(i, output)
 }
