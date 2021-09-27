@@ -18,25 +18,28 @@ for (var i = 1; i <= 30; i++) {
 } 
  
 start('Second Demo')  
-for (var i = 1; i <= 30; i++) {
-    if ((i % 3 === 0) && (i % 5 === 0 ) ) print(i, "CleverPush");
-    else if (i % 3 === 0) print(i, "Clever");
-    else if (i % 5 === 0) print(i, "Push"); 
-    else print(i, "");
+for (var index = 1; index <= 30; index++) {
+    if ((index % 3 === 0) && (index % 5 === 0 ) ) print(index, "CleverPush");
+    else if (index % 3 === 0) print(index, "Clever");
+    else if (index % 5 === 0) print(index, "Push"); 
+    else print(index, "");
 } 
 
 start('Third Demo')  
+const cleverPush = (range) => {
 const condition = { 3: "Clever", 5: "Push" };
-for (var i = 1; i <= 30; i++) {
+for (var i = 1; i <= range; i++) {
   let answer = Object.entries(condition)
     .map(([key, value]) => i % key === 0 ? value : "")
     .join("");
   if (!answer)  i;
 print(i, answer)
 }
+}
+cleverPush(30);
 
 start('Fourth Demo')
-const cleverPush = (range) => {
+const pushClever = (range) => {
     for (let i = 1; i <= range; i++) {
         const clever = i % 3 === 0;
         const push = i % 5 === 0;
@@ -52,7 +55,7 @@ const cleverPush = (range) => {
         } 
     } 
 } 
-cleverPush(30);
+pushClever(30);
 
 
 
