@@ -4,10 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.make-mobile.de/webportal/assets/images/favicon/favicon-32x32_fingerprint.png"
+    />
+    <title>
+      Fizz Buzz with TypeScript and Unit Tetsts on requireJS, without any
+      Framework
+    </title>
+    <script src="./assets/require.js"></script>
   </head>
   <body>
-    <div id="result"></div>
-    <script src="dist/cleverpush.js"></script>
+    <script>
+      var exports = {}
+    </script>
+
+    <button onclick="clearDom();">Clear</button>
+    <button onclick="demoEins(30, printThisToPage_1, startDemo)">
+      Demo One
+    </button>
+    <button onclick="demoZwei(printThisToPage_1, startDemo)">Demo Zwei</button>
+    <button onclick="Drei(30, printThisToPage_1, startDemo)">Demo Drei</button>
+    <a href="remaining.html">remaining demos</a>
+    <h1 id="headline">FizzBuzz</h1>
+    <h5 id="header">click any button to start</h5>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        requirejs(
+          [
+            'dist/printResult',
+            'dist/demoOne/eins',
+            'dist/demoTwo/zwei',
+            'dist/demoThree/drei',
+          ],
+          function () {},
+        )
+      })
+    </script>
   </body>
 </html>

@@ -5,7 +5,11 @@ module.exports = exports = {
     es2021: true,
     //"es6": true
   },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   //  "parser": "@babel/eslint-parser",
   parserOptions: {
@@ -20,5 +24,7 @@ module.exports = exports = {
   ignorePatterns: ['dist'],
   rules: {
     'no-console': 2,
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
   },
 }

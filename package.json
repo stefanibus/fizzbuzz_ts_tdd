@@ -2,7 +2,7 @@
   "name": "cleverpush",
   "version": "1.0.0",
   "description": "fizzbuzz-on-ts-tdd",
-  "main": "index.html",
+  "main": "src/main.js",
   "scripts": {
     "build": "tsc",
     "test": "jest",

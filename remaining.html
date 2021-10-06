@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.make-mobile.de/webportal/assets/images/favicon/favicon-32x32_fingerprint.png"
+    />
+    <title>
+      Fizz Buzz with TypeScript and Unit Tetsts on requireJS, without any
+      Framework
+    </title>
+    <script src="./assets/require.js"></script>
+  </head>
+  <body>
+    <h1 id="headline">FizzBuzz (Remaining examples)</h1>
+    <a href="index.html">back</a>
+    <h5 id="header"></h5>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        requirejs(['dist/remainingDemos/remaining'], function () {})
+      })
+    </script>
+  </body>
+</html>
