@@ -15,20 +15,28 @@
       Framework
     </title>
     <script src="./assets/require.js"></script>
+    <link rel="stylesheet" href="./assets/button.css" />
   </head>
   <body>
     <script>
       var exports = {}
     </script>
 
+    <a class="button active" href="index.html"
+      >Demo with Unit Tests and TypeScript</a
+    >
+    <a class="button" href="remaining.html">further demos</a>
+    <a class="button" href="cssApproach.html">pure CSS Approach</a>
+
+    <br />
+    <h1 id="headline">FizzBuzz: with Unit Tests and TypeScript</h1>
     <button onclick="clearDom();">Clear</button>
     <button onclick="demoEins(30, printThisToPage_1, startDemo)">
       Demo One
     </button>
     <button onclick="demoZwei(printThisToPage_1, startDemo)">Demo Zwei</button>
     <button onclick="Drei(30, printThisToPage_1, startDemo)">Demo Drei</button>
-    <a href="remaining.html">remaining demos</a>
-    <h1 id="headline">FizzBuzz</h1>
+    <br />
     <h5 id="header">click any button to start</h5>
 
     <script>
