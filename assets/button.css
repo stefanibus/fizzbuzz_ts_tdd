@@ -17,3 +17,7 @@
 .button.active {
   opacity: 1;
 }
+
+h5 {
+  padding-bottom: 5em;
+}

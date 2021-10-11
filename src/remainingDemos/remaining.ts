@@ -74,15 +74,15 @@ if (headerElement === null) {
   }
   pushClever(30)
 
-  demoStart(' Five ')
+  demoStart(' Five (without Modulo)')
   const sieve = new Array(30)
   const steps = [
-    { step: 3, value: 'Clever' },
-    { step: 5, value: 'Push' },
-    { step: 15, value: 'CleverPush' },
+    { step: 3, value: ' Clever' },
+    { step: 5, value: ' Push' },
+    { step: 15, value: ' CleverPush' },
   ]
   for (let i = 0; i <= 30; i++) {
-    sieve[i] = i
+    sieve[i] = '' // i not needed as printThisToPage() will take care of it
   }
   for (const s of steps) {
     for (let i = s.step; i <= 30; i += s.step) {
@@ -90,7 +90,7 @@ if (headerElement === null) {
     }
   }
   for (const i in sieve) {
-    printThisToPage(0, sieve[i])
+    printThisToPage(Number(i), sieve[i])
   }
 
   demoStart(' Six')

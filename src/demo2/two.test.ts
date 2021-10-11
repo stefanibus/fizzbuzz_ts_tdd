@@ -1,4 +1,4 @@
-import { two } from './zwei'
+import { two } from './two'
 
 describe('FizzBuzz Zwei', () => {
   it('CleverPush Array should return the following string', () => {

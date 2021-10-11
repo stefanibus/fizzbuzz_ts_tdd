@@ -1,10 +1,10 @@
-const Drei = (
+const Three = (
   range: number,
   printThisToPage: (arg0: number, arg1: string | undefined) => void,
   startDemo: (arg0: string) => void,
 ) => {
   startDemo(
-    ' Drei==> ( keine unit tests, internal for loop, es6 Modulo, if else statement )',
+    ' Three ==> ( keine unit tests, internal for loop, es6 Modulo, if else statement )',
   )
   for (let i = 1; i <= range; i++) {
     const clever = i % 3 === 0

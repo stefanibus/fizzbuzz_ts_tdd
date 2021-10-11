@@ -1,4 +1,16 @@
 "use strict";
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+var e_1, _a;
 var headerElement = document.getElementById('header');
 //  nullable check TS will not complain from this point on  <- no error
 if (headerElement === null) {
@@ -81,24 +93,33 @@ else {
         }
     };
     pushClever(30);
-    demoStart_1(' Five ');
+    demoStart_1(' Five (without Modulo)');
     var sieve = new Array(30);
     var steps = [
-        { step: 3, value: 'Clever' },
-        { step: 5, value: 'Push' },
-        { step: 15, value: 'CleverPush' },
+        { step: 3, value: ' Clever' },
+        { step: 5, value: ' Push' },
+        { step: 15, value: ' CleverPush' },
     ];
     for (var i_4 = 0; i_4 <= 30; i_4++) {
-        sieve[i_4] = i_4;
+        sieve[i_4] = ''; // i not needed as printThisToPage() will take care of it
     }
-    for (var _i = 0, steps_1 = steps; _i < steps_1.length; _i++) {
-        var s = steps_1[_i];
-        for (var i_5 = s.step; i_5 <= 30; i_5 += s.step) {
-            sieve[i_5] = s.value;
+    try {
+        for (var steps_1 = __values(steps), steps_1_1 = steps_1.next(); !steps_1_1.done; steps_1_1 = steps_1.next()) {
+            var s = steps_1_1.value;
+            for (var i_5 = s.step; i_5 <= 30; i_5 += s.step) {
+                sieve[i_5] = s.value;
+            }
         }
     }
+    catch (e_1_1) { e_1 = { error: e_1_1 }; }
+    finally {
+        try {
+            if (steps_1_1 && !steps_1_1.done && (_a = steps_1.return)) _a.call(steps_1);
+        }
+        finally { if (e_1) throw e_1.error; }
+    }
     for (var i_6 in sieve) {
-        printThisToPage_1(0, sieve[i_6]);
+        printThisToPage_1(Number(i_6), sieve[i_6]);
     }
     demoStart_1(' Six');
     var divBy3 = void 0;

@@ -25,17 +25,37 @@
     <a class="button active" href="index.html"
       >Demo with Unit Tests and TypeScript</a
     >
-    <a class="button" href="remaining.html">further demos</a>
+    <a class="button" href="remaining.html">further Demos</a>
     <a class="button" href="cssApproach.html">pure CSS Approach</a>
 
     <br />
     <h1 id="headline">FizzBuzz: with Unit Tests and TypeScript</h1>
     <button onclick="clearDom();">Clear</button>
-    <button onclick="demoEins(30, printThisToPage_1, startDemo)">
+    <button
+      onclick="one.printOnePossibleExampleToPage(30, printThisToPage_1, startDemo)"
+    >
       Demo One
     </button>
-    <button onclick="demoZwei(printThisToPage_1, startDemo)">Demo Zwei</button>
-    <button onclick="Drei(30, printThisToPage_1, startDemo)">Demo Drei</button>
+    <button
+      onclick="two.printOnePossibleExampleToPage(printThisToPage_1, startDemo)"
+    >
+      Demo Two
+    </button>
+    <button onclick="Three(30, printThisToPage_1, startDemo)">
+      Demo Three
+    </button>
+
+    <button
+      onclick="four.printOnePossibleExampleToPage(100, printThisToPage_1, startDemo)"
+    >
+      Demo Four
+    </button>
+
+    <button
+      onclick="five.printOnePossibleExampleToPage(100, printThisToPage_1, startDemo)"
+    >
+      Demo Five
+    </button>
     <br />
     <h5 id="header">click any button to start</h5>
 
@@ -44,9 +64,11 @@
         requirejs(
           [
             'dist/printResult',
-            'dist/demoOne/eins',
-            'dist/demoTwo/zwei',
-            'dist/demoThree/drei',
+            'dist/demo1/one',
+            'dist/demo2/two',
+            'dist/demo3/three',
+            'dist/demo4/four',
+            'dist/demo5/five',
           ],
           function () {},
         )
